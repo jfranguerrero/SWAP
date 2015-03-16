@@ -1,0 +1,118 @@
+Práctica 2
+
+José Francisco Guerrero Collantes
+
+Lo primero que voy a realizar es identificar cada máquina virtual de la forma que recomendó el profesor mediante un email, es decir mostrando en el PROMPT la IP de nuestra máquina.
+Esto se realiza de la siguiente manera:
+
+export PS1="\u@$(ip addr show dev eth0 | grep "inet " | cut -d" " -f6) $"
+
+Para clonar la información de una página web se usará rsync. En mi caso viene instalado por defecto en Ubuntu Server pero si se requiere su instalación simplemente introducimos sudo apt-get install rsync.
+
+De esta forma podremos sincronizar datos entre nuestras dos máquinas virtuales.
+
+Como nuestra intención es que dicha sincronización entre ambos servidores se realice de forma automática mediante crontab debemos eliminar cualquier acción que precise la introducción de datos de forma manual como puede ser la introducción de las contraseñas de nuestras máquinas virtuales. Además ya no es solo una cuestión de comodidad y automatización sino que además es un tema de seguridad ya que evitamos introducir la contraseña con lo que evitamos que ésta nos sea capturada con un keylogger o derivado.
+
+Para conseguir esto se va generar una clave pública y una clave privada donde enviaremos a la otra máquina la clave pública y así conseguir una conexión ssh de forma automatizada.
+
+Por tanto vamos a nuestra máquina secundaria (en mi caso la que posee la IP 192.168.64.129) y generamos ambas claves con ssh-keygen -t dsa.
+
+Aquí adjunto las líneas de terminal de como se han generado las claves.
+
+root@192.168.64.129/24 $ssh-keygen -t dsa
+Generating public/private dsa key pair.
+Enter file in which to save the key (/root/.ssh/id_dsa):
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_dsa.
+Your public key has been saved in /root/.ssh/id_dsa.pub.
+The key fingerprint is:
+8a:6c:ef:7d:3c:5c:52:ec:ee:ae:96:34:27:81:f1:93 root@ubuntu
+The key's randomart image is:
++--[ DSA 1024]----+
+|                 |
+|        .        |
+|         + o     |
+|        . E o    |
+|        S  =     |
+|   . . .  = +    |
+|    + .  + O     |
+|   . . .  B .    |
+|     .o .o.=o    |
++-----------------+	
+
+El siguiente paso es copiar la clave pública en la máquina secundaria. Esto lo hacemos con el comando ssh-copy-id -i .ssh/id_dsa.pub root@192.168.64.128 donde debemos hacer hincapié en introducir como usuario de la máquina principal root y la IP de dicha máquina.
+
+root@192.168.64.129/24 $ssh-copy-id -i .ssh/id_dsa.pub root@192.168.64.128
+The authenticity of host '192.168.64.128 (192.168.64.128)' can't be established.
+ECDSA key fingerprint is d2:65:26:af:d2:1a:f2:a1:4c:19:4c:31:13:05:1c:3a.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.64.128' (ECDSA) to the list of known hosts.
+root@192.168.64.128's password:
+Now try logging into the machine, with "ssh 'root@192.168.64.128'", and check in:
+
+  ~/.ssh/authorized_keys
+
+to make sure we haven't added extra keys that you weren't expecting.
+
+Para comprobar que se realizó correctamente introducimos ssh root@192.168.64.128 como nos ha indicado previamente la terminal. En este caso ha sido un éxito. Enviaremos un fichero entre ambas máquinas para corroborar el funcionamiento de la conexión.
+
+root@192.168.64.129/24 $scp hola.html root@192.168.64.128:/var/www
+hola.html                                     100%   53     0.1KB/s   00:00
+
+Comprobamos en la máquina principal que se recibió el fichero.
+
+root@192.168.64.128/24 $cd /var/www
+root@192.168.64.128/24 $ls
+hola.html  index.html
+
+Concluido lo relacionado con la conexión ssh comenzaremos con el clonado de la carpeta /var/www entre ambas máquinas mediante la orden rsync.
+
+Nos dirigimos a nuestra máquina secundaria e introducimos la orden indicada en el guión de prácticas para sincronizar la carpeta /var/www pero evitando que también se copien las carpetas error, stats y pictures. 
+
+root@192.168.64.129/24 $rsync -avz --delete --exclude=**/stats --exclude=**/error --exclude=**/files/pictures -e "ssh -l root" root@192.168.64.128:/var/www/ /var/www/
+receiving incremental file list
+./
+.hola.html.swp
+file.html
+hola.html
+index.html
+
+sent 153 bytes  received 658 bytes  540.67 bytes/sec
+total size is 12756  speedup is 15.73
+
+Se han transferido los fichero de la máquina principal a la secundaria para que ambos directorios sean totalmente iguales por tanto con ls -la encontraremos los mismos ficheros.
+
+root@192.168.64.129/24 $ls -la /var/www
+total 32
+drwxr-xr-x  2 root root  4096 mar 16 16:14 .
+drwxr-xr-x 13 root root  4096 mar 16 04:33 ..
+-rw-r--r--  1 root root   238 mar 16 16:14 file.html
+-rw-r--r--  1 root root    53 mar 16 04:16 hola.html
+-rw-------  1 root root 12288 mar 16 04:34 .hola.html.swp
+-rw-r--r--  1 root root   177 mar  6 00:07 index.html
+
+Ya solo nos queda la última parte de la práctica, automatizar el clonado de esta carpeta mediante crontab.
+
+Accedemos el fichero /etc/crontab de la máquina secundaria y añadiremos lo siguiente al fichero:
+5 * * * * root rsync -avz --delete --exclude=**/stats --exclude=**/error --exclude=**/files/pictures -e "ssh -l root" root@192.168.64.128:/var/www/ /var/www/
+
+donde hemos indicado que cada 5 minutos el usuario root realice una clonación del directorio /var/www mediante rsync.
+
+Creamos un fichero en la máquina principal (file2.html) para comprobar que se realizó de forma correcta todo.
+
+Reiniciamos el servicio con service cron restart. Esperamos unos minutos y realizamos el ls -la en la máquina secundaria.
+
+root@192.168.64.129/24 $service cron restart
+cron stop/waiting
+cron start/running, process 2095
+root@192.168.64.129/24 $ls -la
+total 36
+drwxr-xr-x  2 root root  4096 mar 16 16:43 .
+drwxr-xr-x 13 root root  4096 mar 16 16:53 ..
+-rw-r--r--  1 root root   990 mar 16 16:43 file2.html
+-rw-r--r--  1 root root   238 mar 16 16:14 file.html
+-rw-r--r--  1 root root    53 mar 16 04:16 hola.html
+-rw-------  1 root root 12288 mar 16 04:34 .hola.html.swp
+-rw-r--r--  1 root root   177 mar  6 00:07 index.html
