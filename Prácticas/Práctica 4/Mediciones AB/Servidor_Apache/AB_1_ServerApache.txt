@@ -1,0 +1,37 @@
+Server Software:        Apache/2.2.22
+Server Hostname:        192.168.64.128
+Server Port:            80
+
+Document Path:          /bench.php
+Document Length:        23 bytes
+
+Concurrency Level:      10
+Time taken for tests:   32.69386 seconds
+Complete requests:      1000
+Failed requests:        93
+   (Connect: 0, Length: 93, Exceptions: 0)
+Write errors:           0
+Total transferred:      235897 bytes
+HTML transferred:       22897 bytes
+Requests per second:    31.18 [#/sec] (mean)
+Time per request:       320.694 [ms] (mean)
+Time per request:       32.069 [ms] (mean, across all concurrent requests)
+Transfer rate:          7.17 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.7      0      15
+Processing:   164  319  24.4    321     453
+Waiting:      140  303  30.3    305     449
+Total:        164  319  24.4    321     453
+
+Percentage of the requests served within a certain time (ms)
+  50%    321
+  66%    328
+  75%    331
+  80%    334
+  90%    342
+  95%    356
+  98%    375
+  99%    390
+ 100%    453 (longest request)
