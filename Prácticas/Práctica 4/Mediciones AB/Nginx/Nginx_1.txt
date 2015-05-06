@@ -1,0 +1,37 @@
+Server Software:        nginx/1.6.2
+Server Hostname:        192.168.64.130
+Server Port:            80
+
+Document Path:          /bench.php
+Document Length:        23 bytes
+
+Concurrency Level:      10
+Time taken for tests:   18.506365 seconds
+Complete requests:      1000
+Failed requests:        92
+   (Connect: 0, Length: 92, Exceptions: 0)
+Write errors:           0
+Total transferred:      224897 bytes
+HTML transferred:       22897 bytes
+Requests per second:    54.04 [#/sec] (mean)
+Time per request:       185.064 [ms] (mean)
+Time per request:       18.506 [ms] (mean, across all concurrent requests)
+Transfer rate:          11.83 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.5      0       3
+Processing:    34  183  64.6    183     355
+Waiting:       34  183  64.6    183     355
+Total:         34  183  64.6    183     355
+
+Percentage of the requests served within a certain time (ms)
+  50%    183
+  66%    216
+  75%    232
+  80%    239
+  90%    268
+  95%    294
+  98%    317
+  99%    335
+ 100%    355 (longest request)
