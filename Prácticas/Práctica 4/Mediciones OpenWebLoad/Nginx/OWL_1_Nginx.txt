@@ -1,0 +1,35 @@
+C:\Users\Jose Franciso>"C:\Users\Jose Franciso\Downloads\openload.exe" 192.168.6
+4.130/bench.php 20
+URL: http://192.168.64.130:80/bench.php
+Clients: 20
+MaTps  45.95, Tps  45.95, Resp Time  0.358, Err   0%, Count    46
+MaTps  46.41, Tps  50.50, Resp Time  0.388, Err   0%, Count    97
+MaTps  47.52, Tps  57.48, Resp Time  0.358, Err   0%, Count   155
+MaTps  48.12, Tps  53.55, Resp Time  0.363, Err   0%, Count   210
+MaTps  48.80, Tps  54.91, Resp Time  0.356, Err   0%, Count   267
+MaTps  48.87, Tps  49.55, Resp Time  0.386, Err   0%, Count   317
+MaTps  49.43, Tps  54.47, Resp Time  0.371, Err   0%, Count   373
+MaTps  49.66, Tps  51.71, Resp Time  0.376, Err   0%, Count   426
+MaTps  49.89, Tps  51.96, Resp Time  0.370, Err   0%, Count   479
+MaTps  49.57, Tps  46.65, Resp Time  0.415, Err   0%, Count   527
+MaTps  49.62, Tps  50.14, Resp Time  0.416, Err   0%, Count   580
+MaTps  49.86, Tps  52.01, Resp Time  0.388, Err   0%, Count   633
+MaTps  49.89, Tps  50.15, Resp Time  0.404, Err   0%, Count   684
+MaTps  50.33, Tps  54.29, Resp Time  0.375, Err   0%, Count   739
+MaTps  50.76, Tps  54.62, Resp Time  0.367, Err   0%, Count   794
+MaTps  50.89, Tps  52.06, Resp Time  0.370, Err   0%, Count   847
+MaTps  51.27, Tps  54.67, Resp Time  0.356, Err   0%, Count   902
+MaTps  51.47, Tps  53.29, Resp Time  0.386, Err   0%, Count   957
+MaTps  51.51, Tps  51.90, Resp Time  0.369, Err   0%, Count  1009
+MaTps  51.92, Tps  55.56, Resp Time  0.386, Err   0%, Count  1065
+MaTps  51.75, Tps  50.20, Resp Time  0.389, Err   0%, Count  1116
+MaTps  52.08, Tps  55.07, Resp Time  0.354, Err   0%, Count  1173
+MaTps  52.22, Tps  53.52, Resp Time  0.382, Err   0%, Count  1227
+MaTps  51.76, Tps  47.62, Resp Time  0.404, Err   0%, Count  1275
+MaTps  51.93, Tps  53.41, Resp Time  0.392, Err   0%, Count  1329
+MaTps  51.97, Tps  52.37, Resp Time  0.371, Err   0%, Count  1382
+Total TPS:  50.58
+Avg. Response time:  0.378 sec.
+Max Response time:   0.878 sec
+Total Requests:    1382
+Total Errors:         0

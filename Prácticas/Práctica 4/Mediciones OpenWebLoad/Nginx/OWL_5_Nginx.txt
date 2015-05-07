@@ -1,0 +1,38 @@
+C:\Users\Jose Franciso>"C:\Users\Jose Franciso\Downloads\openload.exe" 192.168.6
+4.130/bench.php 20
+URL: http://192.168.64.130:80/bench.php
+Clients: 20
+MaTps  46.35, Tps  46.35, Resp Time  0.351, Err   0%, Count    47
+MaTps  47.13, Tps  54.13, Resp Time  0.361, Err   0%, Count   102
+MaTps  48.04, Tps  56.27, Resp Time  0.359, Err   0%, Count   159
+MaTps  48.90, Tps  56.66, Resp Time  0.362, Err   0%, Count   216
+MaTps  49.47, Tps  54.51, Resp Time  0.353, Err   0%, Count   271
+MaTps  49.89, Tps  53.71, Resp Time  0.357, Err   0%, Count   326
+MaTps  50.39, Tps  54.89, Resp Time  0.356, Err   0%, Count   381
+MaTps  50.58, Tps  52.32, Resp Time  0.383, Err   0%, Count   434
+MaTps  51.11, Tps  55.89, Resp Time  0.352, Err   0%, Count   490
+MaTps  51.47, Tps  54.70, Resp Time  0.350, Err   0%, Count   547
+MaTps  51.52, Tps  51.96, Resp Time  0.368, Err   0%, Count   600
+MaTps  51.63, Tps  52.58, Resp Time  0.404, Err   0%, Count   653
+MaTps  51.55, Tps  50.88, Resp Time  0.377, Err   0%, Count   705
+MaTps  51.79, Tps  53.95, Resp Time  0.371, Err   0%, Count   759
+MaTps  52.31, Tps  56.97, Resp Time  0.373, Err   0%, Count   817
+MaTps  52.61, Tps  55.34, Resp Time  0.352, Err   0%, Count   873
+MaTps  52.84, Tps  54.85, Resp Time  0.367, Err   0%, Count   929
+MaTps  52.92, Tps  53.62, Resp Time  0.359, Err   0%, Count   983
+MaTps  53.12, Tps  54.95, Resp Time  0.370, Err   0%, Count  1038
+MaTps  53.41, Tps  55.99, Resp Time  0.357, Err   0%, Count  1095
+MaTps  53.48, Tps  54.19, Resp Time  0.369, Err   0%, Count  1150
+MaTps  53.83, Tps  56.92, Resp Time  0.373, Err   0%, Count  1208
+MaTps  53.42, Tps  49.75, Resp Time  0.369, Err   0%, Count  1258
+MaTps  53.10, Tps  50.25, Resp Time  0.429, Err   0%, Count  1309
+MaTps  52.81, Tps  50.20, Resp Time  0.371, Err   0%, Count  1360
+MaTps  52.81, Tps  52.84, Resp Time  0.403, Err   0%, Count  1413
+MaTps  53.00, Tps  54.67, Resp Time  0.381, Err   0%, Count  1468
+MaTps  52.96, Tps  52.63, Resp Time  0.352, Err   0%, Count  1521
+MaTps  53.09, Tps  54.19, Resp Time  0.376, Err   0%, Count  1576
+Total TPS:  53.09
+Avg. Response time:  0.369 sec.
+Max Response time:   0.886 sec
+Total Requests:    1576
+Total Errors:         0

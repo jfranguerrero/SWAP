@@ -1,0 +1,23 @@
+MaTps  28.95, Tps  30.48, Resp Time  0.627, Err   0%, Count   407
+MaTps  29.44, Tps  33.88, Resp Time  0.625, Err   0%, Count   442
+MaTps  29.27, Tps  27.70, Resp Time  0.638, Err   0%, Count   470
+MaTps  29.66, Tps  33.14, Resp Time  0.637, Err   0%, Count   505
+MaTps  30.08, Tps  33.90, Resp Time  0.636, Err   0%, Count   539
+MaTps  29.96, Tps  28.91, Resp Time  0.634, Err   0%, Count   568
+MaTps  30.19, Tps  32.20, Resp Time  0.631, Err   0%, Count   601
+MaTps  30.43, Tps  32.63, Resp Time  0.621, Err   0%, Count   635
+MaTps  30.49, Tps  30.99, Resp Time  0.646, Err   0%, Count   668
+MaTps  30.63, Tps  31.90, Resp Time  0.625, Err   0%, Count   700
+MaTps  30.76, Tps  31.91, Resp Time  0.634, Err   0%, Count   733
+MaTps  30.81, Tps  31.31, Resp Time  0.624, Err   0%, Count   766
+MaTps  30.95, Tps  32.23, Resp Time  0.633, Err   0%, Count   799
+MaTps  31.02, Tps  31.62, Resp Time  0.624, Err   0%, Count   831
+MaTps  31.17, Tps  32.47, Resp Time  0.637, Err   0%, Count   865
+MaTps  31.01, Tps  29.59, Resp Time  0.630, Err   0%, Count   895
+MaTps  31.19, Tps  32.82, Resp Time  0.634, Err   0%, Count   929
+MaTps  31.08, Tps  30.07, Resp Time  0.648, Err   0%, Count   960
+Total TPS:  30.54
+Avg. Response time:  0.634 sec.
+Max Response time:   0.959 sec
+Total Requests:     960
+Total Errors:         0

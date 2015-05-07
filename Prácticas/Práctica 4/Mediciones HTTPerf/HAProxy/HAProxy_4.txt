@@ -1,0 +1,23 @@
+httperf --timeout=5 --client=0/1 --server=192.168.64.130 --port=80 --uri=/bench.php --rate=150 --send-buffer=4096 --recv-buffer=16384 --num-conns=27000 --num-calls=1
+Maximum connect burst length: 2
+
+Total: connections 27000 requests 9949 replies 788 test-duration 187.980 s
+
+Connection rate: 143.6 conn/s (7.0 ms/conn, <=862 concurrent connections)
+Connection time [ms]: min 40.2 avg 4558.1 max 7999.9 median 4729.5 stddev 2340.1
+Connection time [ms]: connect 1257.7
+Connection length [replies/conn]: 1.000
+
+Request rate: 52.9 req/s (18.9 ms/req)
+Request size [B]: 76.0
+
+Reply rate [replies/s]: min 0.0 avg 4.2 max 46.8 stddev 7.9 (37 samples)
+Reply time [ms]: response 3761.7 transfer 0.0
+Reply size [B]: header 194.0 content 22.0 footer 0.0 (total 216.0)
+Reply status: 1xx=0 2xx=788 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 89.63 system 97.83 (user 47.7% system 52.0% total 99.7%)
+Net I/O: 4.8 KB/s (0.0*10^6 bps)
+
+Errors: total 26212 client-timo 26212 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
