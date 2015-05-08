@@ -1,0 +1,15 @@
+1. En HTTPerf ¿Qué significa --rate?
+	a)Peticiones por conexión
+	b)Conexiones por segundo
+	c)Número de peticiones
+	d)IP
+	Respuesta: B
+
+
+
+2. ¿Qué no es importante en un tráfico tipo "tienda web?
+	a)Alto ancho de banda
+	b)Velocidad
+	c)Experiencia de usuario
+	d)Ninguna de las anteriores
+	Respuesta:A
