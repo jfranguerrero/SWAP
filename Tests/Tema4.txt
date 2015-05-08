@@ -1,0 +1,15 @@
+1. El modelo OSI ¿por cuántas capas esta formado?
+	a)6
+	b)7
+	c)16
+	d)El modelo OSI no está basado en capas.
+	Respuesta: B
+
+
+
+2. ¿Qué tipo de balanceo evita la périda de tiempo en las máquinas más lentas?
+	a)Algoritmo de balanceo basado en tiempo de respuesta
+	b)Algoritmo de balanceo basado en el menor número de conexiones
+	c)Algoritmo de balanceo basado en ponderación
+	d)Algoritmo de balanceo basado en turnos
+	Respuesta:C
