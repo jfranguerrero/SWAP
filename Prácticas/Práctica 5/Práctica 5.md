@@ -88,6 +88,6 @@ En la siguiente imagen se aprecia que funciona de forma correcta.
 
 ![alt tag](https://github.com/jfranguerrero/SWAP/blob/master/Pr%C3%A1cticas/Pr%C3%A1ctica%205/Foto_4.png?raw=true)
 
-Como última comprobación crearemos alguna tabla e insertaremos varias tuplas en la máquina maestro y comprobaremos que se replican en el eaclavo.
+Como última comprobación crearemos alguna tabla e insertaremos varias tuplas en la máquina maestro y comprobaremos que se replican en el esclavo.
 
 ![alt tag](https://github.com/jfranguerrero/SWAP/blob/master/Pr%C3%A1cticas/Pr%C3%A1ctica%205/Foto_5.png?raw=true)
