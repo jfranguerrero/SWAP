@@ -1,0 +1,16 @@
+1. ¿Cúal no es una tarea del cortafuegos?
+	a)Prohibir la ejecución de aplicaciones como administrador
+	b)Controlar protocolos de aplicación
+	c)Bloquear y filtrar paquetes
+	d)Proteger los servidores y aplicaciones de ataques 
+	Respuesta: A
+
+
+
+2.En Iptables ¿Cúal de los siguientes comandos no nos permite transmitir ficheros mediante
+	SSH a nuestro servidor (sftp)?
+	a)iptables -A INPUT -p tcp --dport 21 -j ACCEPT
+	b)iptables -A INPUT -p tcp --dport 3306 -j DROP 
+	c)iptables -A INPUT -p tcp --dport 22 -j DROP 
+	d)iptables -A INPUT -p tcp --dport 21 -j DROP 
+	Respuesta: C
