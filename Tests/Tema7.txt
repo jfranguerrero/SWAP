@@ -1,0 +1,15 @@
+1. ¿Qué RAID se suele usar para bases de datos de altas prestaciones?
+	a)RAID 5
+	b)RAID 6
+	c)RAID 4
+	d)RAID 10
+	Respuesta: C
+
+
+
+2. ¿Cúal no es una característica de los discos RAID?
+	a) No facilita el traslado del almacenamiento a un sistema nuevo
+	b) No simplifica la recuperación de un desastre
+	c) Protege los datos
+	d) Permite acceder a los datos aunque falle un disco
+	Respuesta: C
