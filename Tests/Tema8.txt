@@ -1,0 +1,15 @@
+1. ¿Cuál es el máximo de RAM que poseían los servidores de Google en el momento de su creación?
+	a)256MB
+	b)512MB
+	c)128MB
+	d)1024MB
+	Respuesta: B
+
+
+
+2. ¿Qué es HP Sizer?
+	a) Balanceador de carga
+	b) Sistema de alimentación ininterrumpida
+	c) Herramienta para determinar las necesidades del servidor
+	d) Dispositivo de almacenamiento
+	Respuesta: C
